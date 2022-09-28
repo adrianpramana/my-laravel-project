@@ -9,7 +9,7 @@
 </head>
 <body>
     @include('partials.navbar')
-    <div class="container">
+    <div class="container-fluid">
         @yield('container')
     </div>
 </body>

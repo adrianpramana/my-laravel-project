@@ -11,7 +11,7 @@
 
   <nav class="p-3 bg-gray-50 rounded border-gray-200">
     <div class="container flex flex-wrap justify-between items-center mx-auto">
-      <a href="#" class="flex items-center">
+      <a href="/" class="flex items-center">
           <img src="{{ asset('img/laravelLogo.png') }}" class="mr-3 h-6 sm:h-10" alt="Laravel Logo">
           <span class="self-center text-xl font-semibold whitespace-nowrap">Laravel</span>
       </a>
@@ -21,17 +21,17 @@
       </button>
       <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
         <ul class="flex flex-col mt-4 bg-gray-50 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent">
-          <li>
-            <a href="/" class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 {{ Request::is('home') ? 'active' : '' }}" aria-current="page">Home</a>
+          <li class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0">
+            <a href="/" class="nav-link {{ Request::is('home') ? 'active' : '' }}" aria-current="page">Home</a>
           </li>
-          <li>
-            <a href="/about" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0  {{ Request::is('about') ? 'active' : '' }}">About</a>
+          <li class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">
+            <a href="/about" class="nav-link {{ Request::is('about') ? 'active' : '' }}">About</a>
           </li>
-          <li>
-            <a href="/categories" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 {{ Request::is('categories') ? 'active' : '' }}">Categories</a>
+          <li class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">
+            <a href="/categories" class="nav-link {{ Request::is('categories') ? 'active' : '' }}">Categories</a>
           </li>
-          <li>
-            <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Contact</a>
+          <li class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">
+            <a href="/contact" class="nav-link {{ Request::is('contacts') ? 'active' : '' }}">Contact</a>
           </li>
           <!-- Dropdown menu -->
           <ul class="navbar-nav ms-auto">
