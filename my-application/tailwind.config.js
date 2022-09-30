@@ -5,8 +5,21 @@ module.exports = {
         "./resources/**/*.js",
         "./resources/**/*.vue",
     ],
+    darkMode: "class",
     theme: {
-        extend: {},
+        container: {
+            center: true,
+            padding: "16px",
+        },
+        extend: {
+            backgroundColor: ["active"],
+            colors: {
+                dark: "#0f172a",
+            },
+            screens: {
+                "2xl": "1320px",
+            },
+        },
     },
     plugins: [],
 };

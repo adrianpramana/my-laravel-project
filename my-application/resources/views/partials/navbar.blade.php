@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <nav class="p-3 bg-gray-50 rounded border-gray-200">
+  <nav class="p-3 bg-gray-100 rounded border-gray-200">
     <div class="container flex flex-wrap justify-between items-center mx-auto">
       <a href="/" class="flex items-center">
           <img src="{{ asset('img/laravelLogo.png') }}" class="mr-3 h-6 sm:h-10" alt="Laravel Logo">
@@ -21,14 +21,17 @@
       </button>
       <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
         <ul class="flex flex-col mt-4 bg-gray-50 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent">
-          <li class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0">
-            <a href="/" class="nav-link {{ Request::is('home') ? 'active' : '' }}" aria-current="page">Home</a>
+          <li class="block py-2 pr-4 pl-3 text-slate-700  rounded md:bg-transparen md:p-0">
+            <a href="/" class="nav-link {{ $title === "Home" ? 'active:text-red-500' : '' }}" aria-current="page">Home</a>
           </li>
           <li class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">
-            <a href="/about" class="nav-link {{ Request::is('about') ? 'active' : '' }}">About</a>
+            <a href="/about" class="nav-link {{ $title === "About" ? 'active:bg-blue-800' : '' }}">About</a>
+          </li>
+          <li class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">
+            <a href="/posts" class="nav-link {{ $title === "Blog" ? 'active' : '' }}">Blog</a>
           </li>
           <li class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">
-            <a href="/categories" class="nav-link {{ Request::is('categories') ? 'active' : '' }}">Categories</a>
+            <a href="/categories" class="nav-link {{ $title === "Home" ? 'active' : '' }}">Categories</a>
           </li>
           <li class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">
             <a href="/contact" class="nav-link {{ Request::is('contacts') ? 'active' : '' }}">Contact</a>
