@@ -33,9 +33,20 @@ Route::get('/about', function () {
     ]);
 });
 
-
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('/posts/{slug}', [PostController::class, 'show']);
+
+Route::get('/contact', function () {
+    return view('contacts', [
+        "title" => "Contact"
+    ]);
+});
+Route::get('/categories', function () {
+    return view('categories', [
+        "title" => "Categories"
+    ]);
+});
+
 
 Route::get('/contact/{id}', [ContactController::class, 'show']);
 
